@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p class="line-2px">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>员工信息
+        </p>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">基本信息</a></li>
+        </ul>
+    </div>
+    <form action="">
+        <table class="table-edit table-block"  width="100%">
+                <tbody>
+                    <tr>
+                        <td class="left" nowrap="" width="120"><span class="red1">* </span>身份证号
+                        </td>
+                        <td width="180px">
+                            <input class="form-control" id="idcard" name="idcard"  type="text">
+                        </td>
+                        <td class="title" width="120">政治面貌
+                        </td>
+                        <td width="150px">
+                            <select  id="polity" name="polity"  aria-hidden="true">
+                                <option value="01"  selected="selected">群众</option>
+                                <option value="02">中共党员</option>
+                                <option value="03">共青团员</option>
+                            </select>
+                        </td>
+                        <td id="upload-img" colspan="2" rowspan="5" style="border:1px solid #e1e1e1;text-align: center;">
+                            <input onchange="ajaxSubmitForm();" name="fj_file" id="fj_file" style="display: none;" type="file">
+                            <img src="/RedseaPlatform/skins/style/images/noImage.png" height="160" width="140">
+                            <div style="text-align:center;">
+                                <input id="onuploadbtn" onclick="$('#fj_file').click();" value="上传图片" class="btn btn-success" type="button"><span id="scjd" jindu="0" style="margin-bottom:2px;"></span>
+                            </div>
+                            <input id="pic_herfUrl" name="pictureFile" value="" type="hidden">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left"><span class="red1">* </span>姓名
+                        </td>
+                        <td>
+                            <input class="form-control" id="staffName" name="staffName" validate="required" value="冷梦安" type="text">
+                        </td>
+                        <td class="title"><span class="red1">* </span>民族
+                        </td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" name="nation" id="nation" tabindex="-1" aria-hidden="true">
+                                <option value="1">汉族</option>
+                                <option value="2">蒙古族</option>
+                                <option value="3">回族</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">员工号</td>
+                        <td>
+                            <input class="form-control" name="baseCode" type="text">
+                        </td>
+    
+                        <td class="title"><span class="red1">* </span>户口性质
+                        </td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" id="registProperty" name="registProperty" tabindex="-1" aria-hidden="true">
+                                <option value="外地农村">外地农村</option>
+                                <option value="外地城镇">外地城镇</option>
+                                <option value="本地农村">本地农村</option>
+                                <option value="本地城镇">本地城镇</option>
+    
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 135px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-registProperty-container"><span class="select2-selection__rendered" id="select2-registProperty-container" title="外地农村">外地农村</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td class="left"><span class="red1">* </span>入职时间
+                        </td>
+                        <td>
+                            <input class="form-control" id="joinDate" name="joinDate" readonly="readonly" value="2013-04-14" onclick="WdatePicker()" type="text">
+                        </td>
+                        <td class="title"><span class="red1">* </span>婚姻状况
+                        </td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" name="marriage" id="marriage" tabindex="-1" aria-hidden="true">
+                                <option value="10">未婚</option>
+                                <option value="20">已婚</option>
+                                <option value="30">丧偶</option>
+                                <option value="40">离婚</option>
+                                <option value="90">未说明的婚姻状况</option>
+    
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 135px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-marriage-container"><span class="select2-selection__rendered" id="select2-marriage-container" title="未婚">未婚</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left"><span class="red1">* </span>岗位名称
+                        </td>
+                        <td>
+                            <input class="form-control" id="postAliasName" name="postAliasName" validate="required" value="普通员工" type="text">
+                        </td>
+                        <td class="title"><span class="red1">* </span>最高学历
+                        </td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" name="highEdu" id="education" tabindex="-1" aria-hidden="true">
+                                <option value="">请选择</option>
+                                <option value="10">博士后</option>
+                                <option value="11">博士</option>
+                                <option value="12">硕士</option>
+                                <option value="13">研究生毕业</option>
+                                <option value="14">研究生结业</option>
+                                <option value="21">本科</option>
+                                <option value="31">大专</option>
+                                <option value="40">中专中技</option>
+                                <option value="50">技校</option>
+                                <option value="61">高中</option>
+                                <option value="62">职高</option>
+                                <option value="70">初中</option>
+                                <option value="80">小学</option>
+                                <option value="90">文盲或半文盲</option>
+                                <option value="99">其他</option>
+    
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 135px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-education-container"><span class="select2-selection__rendered" id="select2-education-container" title="请选择">请选择</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">用工类型</td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" id="identity" name="identity" tabindex="-1" value="" aria-hidden="true">
+                                <option value="" selected="selected">--请选择--</option>
+                                <option value="1">劳务派遣</option>
+                                <option value="2">事务代理</option>
+                                <option value="3">业务外包</option>
+                                <option value="4">代发工资</option>
+                                <option value="5">实习生</option>
+                                <option value="6">退休返聘</option>
+                                <option value="7">代缴社保</option>
+                                <option value="8">代缴公积金</option>
+                                <option value="9">代缴商业保险</option>
+                                <option value="10">境外劳务派遣</option>
+                                <option value="11">岗位外包</option>
+                                <option value="12">劳务承揽</option>
+    
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 165px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="7" aria-labelledby="select2-identity-container"><span class="select2-selection__rendered" id="select2-identity-container" title="--请选择--">--请选择--</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </td>
+                        <td class="title">健康状况</td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" id="health" name="health" tabindex="-1" aria-hidden="true">
+                                <option value="1">健康或良好</option>
+                                <option value="2">一般或较弱</option>
+                                <option value="3">有慢性病</option>
+                                <option value="6">残疾</option>
+    
+                            </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 135px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-health-container"><span class="select2-selection__rendered" id="select2-health-container" title="健康或良好">健康或良好</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </td>
+                        <td class="title" nowrap="nowrap">姓名拼音</td>
+                        <td>
+                            <input class="form-control" id="nameSpell" name="nameSpell" value="" type="text">
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td class="left">
+                            直接上司
+                        </td>
+                        <td>
+                            <div style="position: relative;">
+                                <input class="form-control" id="principalStaffName" name="principalStaffName" data-toggle="tooltip" value="柳翼" readonly="readonly" type="text">
+                                <input class="input" id="principalStaffId" name="principalStaffId" value="21cc97b4-1045-44f4-9524-1f98bf6fee44" type="hidden">
+                                <span class="input-inner" style="left:64px;top:7px;position: absolute;">
+                        <a href="javascript:delPrincipalInfo()" class="i-trash" style="margin:0px;padding:0px;" title="删除"></a>
+                        <a id="principalStaff" tabindex="8" class="i-search" title="选择"></a>
+                    </span>
+                            </div>
+                        </td>
+                        <td class="title">开卡银行</td>
+                        <td>
+                            <div>
+                                <div>
+                                    <input class="form-control" id="bankName" name="bankName" value="" type="hidden">
+                                    <input class="form-control" id="bankNameText" name="bankNameText" autocomplete="off" data-provide="typeahead" placeholder="" type="text">
+                                    <ul class="typeahead dropdown-menu" style="top: 38px; left: 8px; display: none;">
+                                    </ul>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                        </td>
+    
+                        <td class="title">出生日期 </td>
+                        <td>
+                            <input class="form-control" id="birthday" name="birthday" readonly="readonly" onclick="WdatePicker()" value="1987-05-23" type="text">
+                        </td>
+    
+                    </tr>
+                    <tr>
+                        <td class="left"><span class="red1">* </span>手机号码
+                        </td>
+                        <td>
+                            <input class="form-control" id="mobilePhone" validate="required,phone" onblur="validatePhone()" name="mobilePhone" value="18377219919" type="text">
+                        </td>
+                        <td class="title">银行帐号</td>
+                        <td>
+                            <input class="form-control" id="bankAccount" name="bankAccount" value="" type="text">
+                        </td>
+                        <td class="title">性别</td>
+                        <td>
+                            <select class="form-control select2-hidden-accessible" name="sex" id="sex" tabindex="-1" aria-hidden="true">
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+    
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 267px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-sex-container"><span class="select2-selection__rendered" id="select2-sex-container" title="男">男</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </td>
+                    </tr>
+                    <tr>
+    
+                        <td class="title">居住地址</td>
+                        <td colspan="3">
+                            <input class="form-control" id="livePlace" name="livePlace" value="" type="text">
+                        </td>
+                        <td class="title">籍贯</td>
+                        <td>
+                            <input class="form-control" id="nativePlace" name="nativePlace" value="辽宁省 大连市 西岗区	 " type="text">
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+    </form>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
