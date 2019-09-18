@@ -9,6 +9,10 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Document</title>
     <style>
+        label {
+            line-height: 34px;
+        }
+
         .form-inline {
             background-color: #fff;
         }
@@ -27,6 +31,31 @@
 
         .red1 {
             color: red;
+        }
+
+        .white1 {
+            color: transparent;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .row:first-child {
+            margin-top: 10px;
+        }
+
+        .form-control {
+            float: right;
+        }
+
+        .btn-group {
+            float: right;
+        }
+
+        .btn-group>.btn:first-child {
+            width: 203px;
+            text-align: right;
         }
     </style>
 </head>
@@ -91,6 +120,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-md-4">
+                    <span class="white1">* </span>
                     <label for="exampleInputName2">员工号</label>
                     <input type="text" class="form-control" id="exampleInputName2">
                 </div>
@@ -157,14 +187,43 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="form-group">
-                    <label for="exampleInputName2">岗位名称</label>
-                    <input type="text" class="form-control" id="exampleInputName2">
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="yonggongleixing">用工类型</label>
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            劳务承揽 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">劳务承揽</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">最高学历</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
+
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="health">健康状况</label>
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            健康或良好 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">健康或良好</a></li>
+                            <li><a href="#">健康或良好</a></li>
+                            <li><a href="#">健康或良好</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="Name2">姓名拼音</label>
+                    <input type="text" class="form-control" id="Name2">
                 </div>
             </div>
             <div>
