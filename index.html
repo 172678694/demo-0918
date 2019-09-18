@@ -9,44 +9,140 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Document</title>
     <style>
-    .form-group{
+        .form-inline {
+            background-color: #fff;
+        }
 
-    }
+        .info-title {
+            border-bottom: 1px solid #ccc;
+            height:40px;
+            margin-bottom:10px;
+        }
+        .clearfix::after{
+            content: '';
+            display:block;
+            clear: both;
+        }
     </style>
 </head>
 
 <body>
     <div class="container" style="width:80%;margin:0 auto;border:1px solid black">
-        <div>
-            <p class="line-2px">
+        <div class="info-title clearfix">
+            <p class="line-2px" style="float:left;padding-right:20px;font-weight:bold;font-size: 15px;line-height: 40px;">
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>员工信息
             </p>
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs" style="float:right;">
                 <li role="presentation" class="active"><a href="#">基本信息</a></li>
             </ul>
         </div>
         <form class="form-inline">
             <div class="row">
                 <div class="form-group">
-                  <label for="exampleInputName2">Name</label>
-                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    <label for="exampleInputName2">身份证号</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail2">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    <label for="exampleInputEmail2">政治面貌</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
                 </div>
             </div>
             <div class="row">
-
-                    <div class="form-group">
-                      <label for="exampleInputName2">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail2">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                    </div>
+                <div class="form-group">
+                    <label for="exampleInputName2">姓名</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                 </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">名族</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">员工号</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">户口性质</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">入职时间</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">婚姻状况</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">岗位名称</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">最高学历</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">用工类型</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">健康状况</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">姓名拼音</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">直接上司</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">开卡银行</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">出生日期</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">手机号码</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">银行账号</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">性别</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputName2">居住地址</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail2">籍贯</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+            <p><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>更多信息</p>
+            <button>确认保存</button>
+            <button>读卡</button>
+            <button>返回</button>
         </form>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
