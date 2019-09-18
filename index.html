@@ -136,6 +136,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">深户</a></li>
                             <li><a href="#">非深户</a></li>
+                            <li><a href="#">外地农村</a></li>
                             <li><a href="#">外地城市</a></li>
                         </ul>
                     </div>
@@ -158,8 +159,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a href="#">已婚</a></li>
-                            <li><a href="#">已婚未育</a></li>
-                            <li><a href="#">已婚已育</a></li>
+                            <li><a href="#">未婚</a></li>
                         </ul>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                             本科 <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">高中</a></li>
+                            <li><a href="#">本科</a></li>
                             <li><a href="#">研究生</a></li>
                             <li><a href="#">博士</a></li>
                         </ul>
@@ -202,7 +202,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="col-xs-6 col-md-4">
                     <span class="red1">* </span>
                     <label for="health">健康状况</label>
@@ -219,63 +218,69 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="col-xs-6 col-md-4">
                     <span class="red1">* </span>
                     <label for="Name2">姓名拼音</label>
                     <input type="text" class="form-control" id="Name2">
                 </div>
             </div>
-            <div>
-                <div class="form-group">
-                    <label for="exampleInputName2">用工类型</label>
-                    <input type="text" class="form-control" id="exampleInputName2">
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="boss">直接上司</label>
+                    <input type="text" class="form-control" id="boss">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">健康状况</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
+
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="Name2">开卡银行</label>
+                    <input type="text" class="form-control" id="Name2">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">姓名拼音</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
-                </div>
-            </div>
-            <div>
-                <div class="form-group">
-                    <label for="exampleInputName2">直接上司</label>
-                    <input type="text" class="form-control" id="exampleInputName2">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">开卡银行</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">出生日期</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
+
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="Name2">出生日期</label>
+                    <input type="text" class="form-control" id="Name2">
                 </div>
             </div>
+            <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <span class="red1">* </span>
+                        <label for="boss">手机号码</label>
+                        <input type="text" class="form-control" id="boss">
+                    </div>
+    
+                    <div class="col-xs-6 col-md-4">
+                        <span class="red1">* </span>
+                        <label for="Name2">银行账号</label>
+                        <input type="text" class="form-control" id="Name2">
+                    </div>
+    
+                    <div class="col-xs-6 col-md-4">
+                        <span class="red1">* </span>
+                        <label for="Name2">性别</label>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                男 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">男</a></li>
+                                <li><a href="#">女</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             <div>
-                <div class="form-group">
-                    <label for="exampleInputName2">手机号码</label>
-                    <input type="text" class="form-control" id="exampleInputName2">
+                <div class="col-xs-12 col-md-8">
+                    <span class="red1">* </span>
+                    <label for="address">居住地址</label>
+                    <input type="text" class="form-control" id="address">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">银行账号</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">性别</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
-                </div>
-            </div>
-            <div>
-                <div class="form-group">
-                    <label for="exampleInputName2">居住地址</label>
-                    <input type="text" class="form-control" id="exampleInputName2">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">籍贯</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2">
+                <div class="col-xs-6 col-md-4">
+                    <span class="red1">* </span>
+                    <label for="born-place">籍贯</label>
+                    <input type="text" class="form-control" id="born-place">
                 </div>
             </div>
             <p><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>更多信息</p>
